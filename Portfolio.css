@@ -5,7 +5,7 @@
 
 
 body {
-	font-size: 12px;
+	font-size: 14px;
 }
 
 
@@ -45,20 +45,14 @@ nav {
 	flex-wrap: nowrap;
 	padding: 20px;
 	gap: 10px;
-	font-size: 2rem;
+	font-size: 2.5rem;
 	margin-top: 10px;
 }
 
 
 .name {
-	font-size: 2.2rem;
+	font-size: 2.5rem;
 	margin-top: 15px;
-}
-
-
-main {
-	position: static;
-	z-index: 0;
 }
 
 
@@ -83,8 +77,8 @@ header {
 .intro {
 	display: flex;
 	flex-direction: column;
-	font-family: "Lucida Console", "Courier New", serif;
 	margin: auto;
+	padding: auto;
 }
 
 h1, 
@@ -97,6 +91,7 @@ h1,
 .smiley-face {
 	height: 25px;
 	width: 25px;
+	margin-left: 10px;
 }
 
 
@@ -104,14 +99,20 @@ h1,
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	margin-top: 100px;
-	margin-left: 50px;
-	margin-right: 50px;
+	padding-top: 100px;
+	padding-left: 50px;
+	padding-right: 50px;
+	background-color: rgba(0, 0, 0, 0.01);
 }
 
 .about_header {
 	display: flex;
 	justify-content: center;
+	font-size: 2.5rem;
+}
+
+main {
+	background-color: rgba(0, 0, 0, 0.04);
 }
 
 .about_words {
@@ -129,22 +130,91 @@ h1,
 	
 }
 
+
 .portfolio_header {
 	display: flex;
 	justify-content: center;
+	font-size: 2.5rem;
 }
+
 
 .portfolio_projects {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	padding-bottom: 100px;
 }
+
 
 .project1,
 .project2,
 .project3,
 .project4 {
 	margin: auto;
+	justify-self: center;
+	padding: 4%;
+	position: relative;
+}
+
+
+.project-image {
+	border-radius: 5px;
+	box-shadow: 0 4px 6px 0 rgba(34, 60, 80, .16);
+	transition: all ease-in-out .2s;
+}
+
+.project-image:hover {
+	filter: brightness(.75);
+	box-shadow: 0 8px 12px 0 rgba(34, 60, 80, .16);
+}
+
+
+.contact_container {
+	display: flex;
+	justify-content: center;
+	padding-top: 50px;
+	padding-bottom: 100px;
+	flex-direction: column;
+	background-color: rgba(0, 0, 0, 0.05);
+	
+}
+
+
+.contact_title {
+	display: flex;
+	justify-content: center;
+}
+
+.contact_words {
+	display: flex;
+	justify-content: center;
+	padding-left: 50px;
+	padding-right:50px;
+	
+}
+
+.bottom_contact_buttons {
+	display: flex;
+	flex-wrap: wrap;
+	padding: auto;
+	gap: 10px;
+	font-size: 3rem;
+	justify-content: space-around;
+
+}
+
+footer {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: rgba(0, 0, 0, 0.12);
+}
+
+.credit {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin: auto;
+	
 }
 
 @media screen and (max-width: 600px) {
@@ -164,5 +234,19 @@ h1,
 		display: flex;
 		position: relative;
 	} 
+	.project-image{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.contact_container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.bottom_contact_buttons {
+		font-size: 20px;
+	}
+	.credit {
+		font-size: 10px;
+	}
 }	
 
