@@ -22,8 +22,8 @@ a:hover, a:active {
 
 nav {
     position: fixed;
-    background-color:rgba(245, 196, 255, 0.9);
-    padding: 10px;
+    background-color: rgba(245, 196, 255, 0.9);
+    /*padding: 10px;*/
 	width: 100%;
  	display: flex;
 	justify-content: space-between;
@@ -31,17 +31,18 @@ nav {
 }
 
 
-.menu_links {
+.menu_links_container {
 	display: flex;
 	flex-direction: column;
 	padding: 20px;
 	gap: 10px;
 	font-size: 1.3rem;
 	margin-top: 10px;
+	text-transform: uppercase;
 }
 
 
-.top_contact_buttons {
+.top_contact_buttons_container {
 	display: flex;
 	flex-wrap: nowrap;
 	padding-top: 30px;
@@ -53,8 +54,6 @@ nav {
 
 .name {
 	font-size: 3rem;
-	padding-top: 20px;
-
 }
 
 
@@ -64,11 +63,13 @@ header {
 	font-size: 12px;
 	justify-content: center;
 	position: relative;
-	top: 50px;
+	padding-top: 50px;
 	flex-direction: column;
 }
 .intro {
 	padding-bottom: 100px;
+	display: flex;
+	flex-direction: column;
 }
 
 
@@ -76,22 +77,14 @@ header {
 	display: flex;
 	justify-content: center;
 	padding-bottom: 100px;
-	padding-top: 180px;
-	
+	padding-top: 180px
 }
 
-
-.intro {
-	display: flex;
-	flex-direction: column;
-	margin: auto;
-}
 
 h1, 
 .intro2,
 .intro3 {
-	display: flex;
-	justify-content: center;
+	text-align: center;
 }
 
 .smiley-face {
@@ -105,15 +98,14 @@ h1,
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	padding-top: 80px;
+	padding-top:100px;
 	padding-left: 50px;
 	padding-right: 50px;
 	background-color: rgba(0, 0, 0, 0.01);
 }
 
 .about_header {
-	display: flex;
-	justify-content: center;
+	text-align: center;
 	font-size: 2.5rem;
 	/*padding-top: 50px;*/
 }
@@ -123,14 +115,10 @@ main {
 }
 
 .about_words {
-	display: flex;
-	flex-direction: column;
+	text-align: justify;
 	padding-bottom: 100px;
-	
-}
 
-.about_words {
-	justify-content: center;
+	
 }
 
 
@@ -141,26 +129,29 @@ main {
 
 
 .portfolio_header {
-	/*margin-top: 100px;*/
 	padding-top: 100px;
-	display: flex;
-	justify-content: center;
+	text-align: center;
 	font-size: 2.5rem;
 }
 
+.project_title {
+	text-align: center;
+	font-size: 1.5rem;
+}
 
-.portfolio_projects {
+.portfolio_container {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	padding-bottom: 100px;
+	width: 75%;
 }
 
 
-.project {
+.project_container {
 	margin: auto;
 	justify-self: center;
-	padding: 4%;
+	padding: 50px;
 	position: relative;
 	z-index: 0;
 }
@@ -185,29 +176,26 @@ main {
 	padding-bottom: 100px;
 	flex-direction: column;
 	background-color: rgba(0, 0, 0, 0.05);
-	
 }
 
 
 .contact_title {
-	display: flex;
-	justify-content: center;
+	text-align: center;
 }
 
-.contact_words {
-	display: flex;
-	justify-content: center;
+.contact_text {
+	text-align: center;
 	padding-left: 50px;
 	padding-right:50px;
-	
 }
 
-.bottom_contact_buttons {
+.bottom_contact_buttons_container {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 10px;
 	font-size: 3rem;
 	justify-content: space-around;
+	padding-top: 20px;
 
 }
 
@@ -217,17 +205,18 @@ footer {
 	background-color: rgba(0, 0, 0, 0.12);
 }
 
-.credit {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
+.credit_container {
+	display: block;
+	text-align: center;
 	margin: auto;
 	
 }
 
 .itMonsterImg {
 	display: flex;
+	justify-content: center;
 	padding-left: 400px;
+
 }
 
 @media screen and (max-width: 600px) {
@@ -238,21 +227,21 @@ footer {
 		display: flex;
 		flex-wrap: nowrap;
 	}
-	.menu_links,
-	.top_contact_buttons {
+	.menu_links_container,
+	.top_contact_buttons_container {
 		flex-direction: column;
 		font-size: 12px;
 	}
 	.name {
 		font-size: 20px; 
-		flex-wrap: wrap;
+		/*flex-wrap: wrap;*/
 		padding-right: 50px;
 	} 
 	header {
 		display: flex;
 		position: relative;
 	} 
-	.top_contact_buttons {
+	.top_contact_buttons_container {
 		display: flex;
 		flex-wrap: wrap;
 	}
@@ -260,14 +249,19 @@ footer {
 		display: flex;
 		flex-wrap: wrap;
 	}
+	.project_description_text {
+		text-align: justify;
+	}
+
 	.contact_container {
 		display: flex;
 		flex-wrap: wrap;
 	}
-	.bottom_contact_buttons {
+	.bottom_contact_buttons_container {
 		font-size: 20px;
 	}
-	.credit {
+
+	.credit_container {
 		font-size: 10px;
 	}
 	.itMonsterImg {
